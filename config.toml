@@ -6,7 +6,7 @@ disableKinds = ["section", "taxonomy", "term", "RSS", "robotsTXT"]
 defaultContentLanguage = "en"
 
 # The name of this wonderful theme ;-).
-theme = "hugo-scroll"
+theme = "davidgs"
 
 # The "title" of your website
 title = "Care and Feeding of Patrick Hogan"
