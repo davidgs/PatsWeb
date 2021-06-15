@@ -26,7 +26,13 @@
                     <h2 class="post-title">{{ .Title }}</h2>
                 </header>
                 <section class="post-content">
-                    {{ .Content }}
+                {{ $postTitle := .Title }}
+                {{ if eq $postTitle "Calendar" }}
+                <h3>Pat's Calendar</h3>
+                  {{- partial "calendar.html" . -}}
+                {{ else }}
+                  {{ .Content }}
+                {{ end }}
                 </section>
             </article>
             <div class='post-after'></div>

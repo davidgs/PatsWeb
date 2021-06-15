@@ -1,4 +1,5 @@
 {{ define "main" }}
+
   <main class="content page-template page-{{ .Slug }}" role="main">
     <article class="post page">
       <header class="post-header">
@@ -7,8 +8,17 @@
         </a>
       </header>
       <h1 class="post-title">{{ .Title }}</h1>
+      <h2>What the fuck?</h2>
       <section class="post-content">
+      {{ $postTitle := .Title }}
+
+      {{ if eq $postTitle "Calendar" }}
+        <h3>Pat's Calendar</h3>
+        {{- partial "calendar.html" . -}}
+      {{ else }}
+        <h3>Not A calendar Page</h3>
         {{ .Content }}
+      {{ end }}
       </section>
     </article>
   </main>
