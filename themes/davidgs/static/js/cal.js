@@ -153,7 +153,7 @@ function listUpcomingEvents() {
     'maxResults': 20,
     'orderBy': 'startTime'
   }).then(function (response) {
-    for (var i = 0; i < response.items.length; i++) {
+    for (var i = 0; i < response.result.items.length; i++) {
       var li = document.createElement('li');
       var item = response.items[i];
       var classes = [];
