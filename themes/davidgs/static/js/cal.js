@@ -155,7 +155,7 @@ function listUpcomingEvents() {
   }).then(function (response) {
     for (var i = 0; i < response.result.items.length; i++) {
       var li = document.createElement('li');
-      var item = response.items[i];
+      var item = response.result.items[i];
       var classes = [];
       var allDay = item.start.date ? true : false;
       var startDT = allDay ? item.start.date : item.start.dateTime;
