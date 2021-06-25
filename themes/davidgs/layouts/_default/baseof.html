@@ -1,24 +1,127 @@
 <!DOCTYPE html>
-<html>
-  {{- partial "head.html" . -}}
-  <body>
-    {{- partial "header.html" . -}}
-    {{- block "main" . }}{{- end }}
-    {{- partial "footer.html" . -}}
+<html lang="en">
 
-    <!-- We do need jQuery to be loaded before HugoScroll script -->
-    <script
-      type="text/javascript"
-      src="https://code.jquery.com/jquery-1.11.3.min.js"
-    ></script>
+{{- partial "head.html" . -}}
 
-    <!-- The main JavaScript files for HugoScroll -->
-    <script type="text/javascript" src='{{ "js/icons.js" | absURL }}'></script>
-    <script type="text/javascript" src='{{ "js/index.js" |absURL }}'></script>
-    <!-- A partial to be overwritten by the user.
+<body>
+  {{- partial "header.html" . -}}
+  {{- block "main" . }}{{- end }}
+  {{- partial "footer.html" . -}}
+
+
+  <script src=https://code.jquery.com/jquery-3.6.0.js integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin=anonymous></script>
+  <link rel=stylesheet href=/node_modules/bootstrap/dist/css/bootstrap.min.css>
+  <script src=/node_modules/bootstrap/dist/js/bootstrap.min.js></script>
+  <script src="{{ "js/cal.js" | absURL }}"></script>
+  <link rel=stylesheet href=/node_modules/@fortawesome/fontawesome-free-webfonts/css/fontawesome.css>
+  <link rel=stylesheet href=/node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-solid.css>
+  <link rel=stylesheet href="{{ "css/screen.css" | absURL }}">
+  <link rel=stylesheet href="{{ "css/cal.css" | absURL }}">
+  <link rel=stylesheet href="{{ "css/normalize.css" | absURL }}">
+  <link rel=stylesheet href="{{ "css/forms.css" | absURL }}">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700" rel=stylesheet
+    type=text/css>
+  <link
+    href="https://fonts.googleapis.com/css?family=Oswald:400,300,700|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Roboto+Slab:400,100,300,700"
+    rel=stylesheet type=text/css>
+  <link rel=stylesheet href="{{ "fork-awesome/css/fork-awesome.min.css" | absURL }}" type=text/css>
+  <!-- We do need jQuery to be loaded before HugoScroll script -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <!--script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script -->
+  <!-- The main JavaScript files for HugoScroll -->
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/arrobefr-jquery-calendar-bs4@1.0.3/dist/js/jquery-calendar.min.js"></script>
+  <script type="text/javascript" src='{{ "node_modules/bootstrap/dist/js/bootstrap.min.js" | absURL }}'></script>
+  <script type="text/javascript" src='{{ "node_modules/moment/min/moment-with-locales.min.js" | absURL }}'></script>
+  <script type="text/javascript"
+    src='{{ "node_modules/jquery-touchswipe/jquery.touchSwipe.min.js" | absURL }}'></script>
+  <script type="text/javascript" src='{{ "js/icons.js" | absURL }}'></script>
+  <script type="text/javascript" src='{{ "js/index.js" |absURL }}'></script>
+
+
+
+  <!-- <script src="/dist/js/jquery-calendar.min.js"></script -->
+  <script type="text/javascript"
+    src="https://cdn.polyfill.io/v3/polyfill.min.js?version=3.52.1&features=Array.prototype.forEach,console,Date.prototype.toISOString,document,Intl,Map,Promise,Set"></script>
+  <script type="text/javascript" src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/dayjs@1.8.23/plugin/localizedFormat.js"></script>
+  <script type="text/javascript">dayjs.extend(window.dayjs_plugin_localizedFormat);</script>
+
+  <!-- A partial to be overwritten by the user.
              Simply place a custom_body.html into
              your local /layouts/partials-directory -->
-    {{- partial "custom_body.html" . -}}
-    {{- partial "statcounter.html" . -}}
-  </body>
+  {{- partial "custom_body.html" . -}}
+  <script>
+    var observer = new IntersectionObserver(function (entries) {
+      console.log("Intersecting: " + entries[0]['intersectionRatio'] + " ID: " + entries[0]['target'].id + " Is it: " + entries[0]['isIntersecting']);
+      const thisOne = observed.get(entries[0]['target'].id);
+      var last = thisOne.lastViz;
+      var ratio = entries[0]['intersectionRatio'];
+      const el = document.querySelector(thisOne.form);
+      if (ratio >= 0.125) {
+        if (ratio > last) {
+          if (el.classList.contains("tf")) {
+            el.classList.remove("tf");
+          }
+        } else {
+          if (!el.classList.contains("tf")) {
+            el.classList.add("tf");
+          }
+        }
+      } else {
+        if (!el.classList.contains("tf")) {
+          el.classList.add("tf");
+        }
+      }
+      observed.set(thisOne.lastViz, ratio);
+
+    }, {
+      threshold: [0, 0.125, 0.3, 0.5, 1.0]
+    }
+    );
+    let observed = new Map();
+    observed.set('daily-meds', {
+      "name": "#daily-meds",
+      "form": "#typeform-meds",
+      "show": false,
+      "lastViz": 0.00
+    });
+    observed.set('pain', {
+      "name": "#pain",
+      "form": "#typeform-pain",
+      "show": false,
+      "lastViz": 0.00
+    });
+    observed.set('read-me', {
+      "name": "#read-me",
+      "form": "#typeform-about",
+      "show": false,
+      "lastViz": 0.00
+    });
+    observed.set('going-to-the-er', {
+      "name": "#going-to-the-er",
+      "form": "#typeform-er",
+      "show": false,
+      "lastViz": 0.00
+    });
+    observed.set('locations', {
+      "name": "#locations",
+      "form": "#typeform-doc",
+      "show": false,
+      "lastViz": 0.00
+    });
+    observed.set('contact', {
+      "name": "#contact",
+      "form": "#typeform-contact",
+      "show": "false",
+      "lastViz": 0.00
+    });
+    for (let [b, a] of observed)
+        observer.observe(document.querySelector(a.name)),
+          console.log(b + ' = ' + a.name)
+  </script>
+</body>
+
 </html>

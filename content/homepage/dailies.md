@@ -10,7 +10,7 @@ Just put them in a white bowl, put them next to him, and remind him to take them
 
 The boxes should be refilled every weekend.
 
-In addition, he takes a Lovenox (100ml) injection every morning and every evening. His nurse, Chantal, will take care of the evening injection while his pleural tube is drained. In general, Wendy will handle his morning injections. If she is not available, [call me](tel:19195345099) and I can walk you through it. 
+In addition, he takes a Lovenox (100ml) injection every morning and every evening. His nurse, Chantal, will take care of the evening injection while his pleural tube is drained. In general, Wendy will handle his morning injections. If she is not available, [call me](tel:19195345099) and I can walk you through it.
 
 ## Morning Meds
 
@@ -23,7 +23,7 @@ In addition, he takes a Lovenox (100ml) injection every morning and every evenin
 - MucinexDM x1
   [![mucinex](images/mucinex-sm-1.jpeg)](images/mucinex-1-jpeg)
 
-## 3:00 pm Meds
+## Afternoon Meds
 
 - Gabapentin (300mg) x2
   [![gabapentin](images/gaba-sm-1.jpeg)](images/gaba-1.jpeg)
