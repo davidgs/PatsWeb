@@ -26,6 +26,42 @@ var SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
 var authorizeButton = document.getElementById('authorize_button');
 var signoutButton = document.getElementById('signout_button');
 
+
+var dummyData = '{\
+  "kind": "calendar#event",\
+  "etag": "\"3247260183599000\"",\
+  "id": "_6t13ec9o70s3gb9o74p30b9k8d330b9p88ok4b9p74o4cd1m712kcci38o",\
+  "status": "confirmed",\
+  "htmlLink": "https://www.google.com/calendar/event?eid=XzZ0MTNlYzlvNzBzM2diOW83NHAzMGI5azhkMzMwYjlwODhvazRiOXA3NG80Y2QxbTcxMmtjY2kzOG8gNDJnNnVtbjgzaXFvY2VycG50dmJybG04bGNAZw",\
+  "created": "2021-06-09T11:47:53.000Z",\
+  "updated": "2021-06-18T12:55:09.933Z",\
+  "summary": "Chemo",\
+  "location": "Center For Hematology Oncology: Brenner Warren MD, 701 NW 13th St, Boca Raton, FL 33486, USA",\
+  "creator": {\
+    "email": "santafen@gmail.com"\
+  },\
+  "organizer": {\
+    "email": "42g6umn83iqocerpntvbrlm8lc@group.calendar.google.com",\
+    "displayName": "Hogan Busy Schedule",\
+    "self": true\
+  },\
+  "start": {\
+    "dateTime": "2021-06-23T10:00:00-04:00"\
+  },\
+  "end": {\
+    "dateTime": "2021-06-23T15:30:00-04:00"\
+  },\
+  "iCalUID": "7B718888-8920-4CF0-9B1B-990F468EF2CF",\
+  "sequence": 1,\
+  "reminders": {\
+    "useDefault": false,\
+    "overrides": {\
+      "method": "popup",\
+      "minutes": 30\
+    }\
+  },\
+  "eventType": "default"\
+}'
 //--------------------- Add a 0 to numbers
 function padNum(num) {
   if (num <= 9) {
@@ -144,6 +180,7 @@ function handleSignoutClick(event) {
       * the authorized user's calendar. If no events are found an
       * appropriate message is printed.
       */
+var calEvents = [];
 function listUpcomingEvents() {
   gapi.client.calendar.events.list({
     'calendarId': calendarId,
@@ -153,12 +190,17 @@ function listUpcomingEvents() {
     'maxResults': 20,
     'orderBy': 'startTime'
   }).then(function (response) {
-    for (var i = 0; i < response.items.length; i++) {
+    for (var i = 0; i < response.result.items.length; i++) {
       var li = document.createElement('li');
-      var item = response.items[i];
+      var item = response.result.items[i];
+      var cEv = {};
+      console.log(JSON.stringify(response.result.items[i]));
       var classes = [];
       var allDay = item.start.date ? true : false;
       var startDT = allDay ? item.start.date : item.start.dateTime;
+      cEv.time = startDT;
+      cEv.title = item.summary;
+      cEv.content = item.location;
       var dateTime = startDT.split("T"); //split date from time
       var date = dateTime[0].split("-"); //split yyyy mm dd
       var startYear = date[0];
@@ -188,10 +230,28 @@ function listUpcomingEvents() {
           startHour, ':', startMin, '</font><font size="5" face="courier"> @ ', item.summary, '</font><br><br>'
         ];
       }
+      calEvents.push(cEv);
       li.innerHTML = str.join('');
       li.setAttribute('class', classes.join(' '));
       document.getElementById('pats-calendar').appendChild(li);
     }
+   // moment.format();
+    // moment.locale('en');
+    // var now = moment();
+    // // now.weekday.dayline.format.
+    // //   now.weekday.dayline.format('dddd DD/MM');
+    // $('#pats-calendar').Calendar({
+    //   events: calEvents
+    //   // [
+    //   //   { // An event on the current week on Wednesday from 10h to 12h
+    //   //     start: now.startOf('week').isoWeekday(3).startOf('day').add(10, 'h'),
+    //   //     end: now.startOf('week').isoWeekday(3).startOf('day').add(12, 'h'),
+    //   //     title: 'An event title !',
+    //   //     content: 'Hello World! <br>Foo Bar<p class="text-right">Wow this text is right aligned !</p>',
+    //   //     category: 'A test category name'
+    //   //   }
+    //   // ]
+    // }).init();
     // document.getElementById('updated').innerHTML = "updated " + today;
     // document.getElementById('calendar').innerHTML = calName;
 
