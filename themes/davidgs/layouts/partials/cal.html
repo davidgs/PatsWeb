@@ -1,0 +1,39 @@
+<div id="pats-calendar">
+
+</div>
+<script>
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var calendarEl = document.getElementById('pats-calendar');
+    var d = new Date();
+    var n = d.getMonth() + 1;
+    var dt = d.getDate();
+    if (n < 10) {
+      n = "0" + n;
+    }
+    if (dt < 10) {
+      dt = "0" + dt;
+    }
+    var f = d.getFullYear() + "-" + n + "-" + dt;
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      height: "auto",
+      initialDate: f,
+      slotMinTime: "08:00:00",
+      slotMaxTime: "23:00:00",
+      slotDuration: "00:30:00",
+      nowIndicator: true,
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+      }
+    });
+    calendar.render();
+    calendar.updateSize();
+  });
+
+</script>
+<script>
+
+</script>

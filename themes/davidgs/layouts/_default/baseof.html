@@ -13,11 +13,11 @@
     crossorigin=anonymous></script>
   <link rel=stylesheet href=/node_modules/bootstrap/dist/css/bootstrap.min.css>
   <script src=/node_modules/bootstrap/dist/js/bootstrap.min.js></script>
-  <script src="{{ "js/cal.js" | absURL }}"></script>
+  <!-- <script src="{{ "js/cal.js" | absURL }}"></script> -->
   <link rel=stylesheet href=/node_modules/@fortawesome/fontawesome-free-webfonts/css/fontawesome.css>
   <link rel=stylesheet href=/node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-solid.css>
   <link rel=stylesheet href="{{ "css/screen.css" | absURL }}">
-  <link rel=stylesheet href="{{ "css/cal.css" | absURL }}">
+  <!-- <link rel=stylesheet href="{{ "css/cal.css" | absURL }}"> -->
   <link rel=stylesheet href="{{ "css/normalize.css" | absURL }}">
   <link rel=stylesheet href="{{ "css/forms.css" | absURL }}">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700" rel=stylesheet
@@ -27,8 +27,6 @@
     rel=stylesheet type=text/css>
   <link rel=stylesheet href="{{ "fork-awesome/css/fork-awesome.min.css" | absURL }}" type=text/css>
   <!-- We do need jQuery to be loaded before HugoScroll script -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"
-    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <!--script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script -->
   <!-- The main JavaScript files for HugoScroll -->
   <script type="text/javascript"
@@ -39,7 +37,8 @@
     src='{{ "node_modules/jquery-touchswipe/jquery.touchSwipe.min.js" | absURL }}'></script>
   <script type="text/javascript" src='{{ "js/icons.js" | absURL }}'></script>
   <script type="text/javascript" src='{{ "js/index.js" |absURL }}'></script>
-
+<link href='{{ "node_modules/fullcalendar/main.css" | absURL }}' rel='stylesheet' />
+<script src='{{ "node_modules/fullcalendar/main.js" | absURL }}'></script>
 
 
   <!-- <script src="/dist/js/jquery-calendar.min.js"></script -->
@@ -48,7 +47,12 @@
   <script type="text/javascript" src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
   <script type="text/javascript" src="https://unpkg.com/dayjs@1.8.23/plugin/localizedFormat.js"></script>
   <script type="text/javascript">dayjs.extend(window.dayjs_plugin_localizedFormat);</script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/i18n/datepicker.en.js"></script>
   <!-- A partial to be overwritten by the user.
              Simply place a custom_body.html into
              your local /layouts/partials-directory -->
@@ -112,6 +116,12 @@
       "show": false,
       "lastViz": 0.00
     });
+    observed.set('calendar', {
+        "name": "#calendar",
+        "form": "#typeform-cal",
+        "show": false,
+        "lastViz": 0.00
+      });
     observed.set('contact', {
       "name": "#contact",
       "form": "#typeform-contact",
