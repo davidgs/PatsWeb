@@ -17,7 +17,7 @@
   <link rel=stylesheet href=/node_modules/@fortawesome/fontawesome-free-webfonts/css/fontawesome.css>
   <link rel=stylesheet href=/node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-solid.css>
   <link rel=stylesheet href="{{ "css/screen.css" | absURL }}">
-  <!-- <link rel=stylesheet href="{{ "css/cal.css" | absURL }}"> -->
+   <link rel=stylesheet href="{{ "css/custom-cal.css" | absURL }}">
   <link rel=stylesheet href="{{ "css/normalize.css" | absURL }}">
   <link rel=stylesheet href="{{ "css/forms.css" | absURL }}">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700" rel=stylesheet
@@ -39,7 +39,9 @@
   <script type="text/javascript" src='{{ "js/index.js" |absURL }}'></script>
 <link href='{{ "node_modules/fullcalendar/main.css" | absURL }}' rel='stylesheet' />
 <script src='{{ "node_modules/fullcalendar/main.js" | absURL }}'></script>
-
+<script src='https://cdn.jsdelivr.net/npm/rrule@2.6.4/dist/es5/rrule.min.js'></script>
+<!-- the rrule-to-fullcalendar connector. must go AFTER the rrule lib -->
+<script src='https://cdn.jsdelivr.net/npm/@fullcalendar/rrule@5.5.0/main.global.min.js'></script>
 
   <!-- <script src="/dist/js/jquery-calendar.min.js"></script -->
   <script type="text/javascript"

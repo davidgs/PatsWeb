@@ -22,12 +22,15 @@
       slotMinTime: "08:00:00",
       slotMaxTime: "23:00:00",
       slotDuration: "00:30:00",
+      navLinks: true,
       nowIndicator: true,
       headerToolbar: {
         left: 'prev,next today',
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay'
-      }
+      },
+      {{- partial "calData.html" | safeJS -}}
+
     });
     calendar.render();
     calendar.updateSize();
