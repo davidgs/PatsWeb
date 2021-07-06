@@ -10,29 +10,30 @@ Just put them in a white bowl, put them next to him, and remind him to take them
 
 The boxes should be refilled every weekend.
 
-In addition, he takes a Lovenox (100ml) injection every morning and every evening. His nurse, Chantal, will take care of the evening injection while his pleural tube is drained. In general, Wendy will handle his morning injections. If she is not available, [call me](tel:19195345099) and I can walk you through it.
+In addition, he takes a Lovenox (100ml) injection every morning and every evening. His nurse, Shantal, will take care of the evening injection while his pleural tube is drained. In general, Wendy will handle his morning injections. If she is not available, [{{<icon class="fa fa-phone">}}&nbsp; call me](tel:19195345099) and I can walk you through it.
 
 ## Morning Meds
 
-- Gabapentin (300mg) x2
-  [![gabapentin](images/gaba-sm-1.jpeg)](images/gaba-1.jpeg)
-- Ondansetron (4mg) x2
-  [![odanestron](images/odan-sm-1.jpeg)](images/odan-1.jpeg)
-- Pantoprazole (40mg) x2
-  [![pantoprazole](images/panto-sm-1.jpeg)](images/panto-1.jpeg)
-- MucinexDM x1
-  [![mucinex](images/mucinex-sm-1.jpeg)](images/mucinex-1-jpeg)
+| Image | Medication | Dose | Number  |
+|  ---  |  ---  |  ---  |  ---  |
+| [![gabapentin](images/gaba-sm-1.jpeg)](images/gaba-1.jpeg) | Gabapentin | 300mg | x2 |
+| [![odanestron](images/odan-sm-1.jpeg)](images/odan-1.jpeg) | Ondanestron | 4mg | x2 |
+| [![pantoprazole](images/panto-sm-1.jpeg)](images/panto-1.jpeg) | Pantoprazole | 40mg | x2 |
+| [![mucinex](images/mucinex-sm-1.jpeg)](images/mucinex-1-jpeg)  | MucinexDM | NA | x1 |
 
 ## Afternoon Meds
+| Image | Medication | Dose | Number |
+|  ---  |  ---  |  ---  |  ---  |
+| [![gabapentin](images/gaba-sm-1.jpeg)](images/gaba-1.jpeg) | Gabapentin | 300mg | x2 |
+| [![odanestron](images/odan-sm-1.jpeg)](images/odan-1.jpeg) | Ondansetron | 4mg | x2 |
+|       |       |       |       |
 
-- Gabapentin (300mg) x2
-  [![gabapentin](images/gaba-sm-1.jpeg)](images/gaba-1.jpeg)
+
 
 ## Night Meds
-
-- Gabapentin (300mg) x2
-  [![gabapentin](images/gaba-sm-1.jpeg)](images/gaba-1.jpeg)
-- Montelukast (10mg) X 1
-  [![montelukast](images/monte-sm-1.jpeg)](images/monte-1-jpeg)
-- MucinexDM x1
-  [![mucinex](images/mucinex-sm-1.jpeg)](images/mucinex-1-jpeg)
+| Image | Medication | Dose | Number |
+|  ---  |  ---  |  ---  |  ---  |
+| [![gabapentin](images/gaba-sm-1.jpeg)](images/gaba-1.jpeg) | Gabapentin | 300mg | x2 |
+| [![odanestron](images/odan-sm-1.jpeg)](images/odan-1.jpeg) | Ondansetron | 4mg | x2 |
+| [![montelukast](images/monte-sm-1.jpeg)](images/monte-1-jpeg) | Montelukast | 10mg | x1 |
+| [![mucinex](images/mucinex-sm-1.jpeg)](images/mucinex-1-jpeg) | MucinexDM | N/A | x1 |
