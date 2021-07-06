@@ -14,4 +14,4 @@ Please, in the interest of privacy, **do not** share this resource with anyone e
 
 **Important**: Pat has allergies! There are Epi-Pens in the cabinet in the treatment room. Please familiarize yourself with how to use the EPI-Pen immediately. You can watch a [quick video](https://youtu.be/EN83hen4D-Y) here.
 
-If you have additions, comments, etc. please feel free to [submit them](mailto:davidgs@davidgs.com) so that we can make this a living document.
+If you have additions, comments, etc. please feel free to [{{<icon class="fa fa-envelope">}}&nbsp; submit them](mailto:davidgs@davidgs.com) so that we can make this a living document.
