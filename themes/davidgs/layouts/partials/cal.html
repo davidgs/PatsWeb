@@ -29,8 +29,61 @@
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay'
       },
-      {{- partial "calData.html" | safeJS -}}
-
+      eventMouseEnter: function (info) {
+        info.el.setAttribute('data-toggle', 'tooltip');
+        info.el.setAttribute('data-html', 'true');
+        info.el.setAttribute('data-animation', 'true');
+        info.el.setAttribute('data-placement', 'auto');
+        var title = info.event.title
+        if(info.event.extendedProps.hasOwnProperty('description')){
+         title += "</br>" + info.event.extendedProps.description;
+        }
+        var link = "";
+        if(info.event.url != ""){
+          link = "<a href='" + info.event.url + "' target='_blank'>" + info.event.title + "</a>";
+        } else if (info.event.extendedProps.hasOwnProperty('location')){
+          link = info.event.extendedProps.location;
+        }
+        var pop = ""
+        if(title != ""){
+          pop = title + "</br>"
+        }
+        pop += link;
+        info.el.setAttribute('data-title', pop);
+        $(info.el).tooltip('show');
+        info.el.style.borderColor = 'red';
+      },
+      eventMouseLeave: function (info) {
+        $(info.el).tooltip('hide');
+        info.el.style.borderColor = 'white';
+      },
+      eventSources: [
+        {
+          url: 'https://davidgs.com:1880/red/visitors', // use the `url` property
+          method: 'get',
+          color: 'steelblue',    // an option!
+          textColor: 'white',  // an option!
+          failure: function () {
+            alert('there was an error while fetching new visitors!');
+          },
+        },
+        {
+          url: 'https://davidgs.com:1880/red/doctors',
+          color: 'red',
+          textColor: 'black',
+          failure: function () {
+            alert('there was an error while fetching Doctor appointments!');
+          },
+        },
+        {
+          url: 'https://davidgs.com:1880/red/other',
+          color: 'mediumpurple',
+          textColor: 'black',
+          failure: function () {
+            alert('there was an error while fetching events!');
+          },
+        }
+      ]
     });
     calendar.render();
     calendar.updateSize();
