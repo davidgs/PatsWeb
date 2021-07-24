@@ -19,14 +19,16 @@ In addition, he takes a Lovenox (100ml) injection every morning and every evenin
 | [![gabapentin](images/gaba-sm-1.jpeg)](images/gaba-1.jpeg) | Gabapentin | 300mg | x2 |
 | [![odanestron](images/odan-sm-1.jpeg)](images/odan-1.jpeg) | Ondanestron | 4mg | x2 |
 | [![pantoprazole](images/panto-sm-1.jpeg)](images/panto-1.jpeg) | Pantoprazole | 40mg | x2 |
-| [![mucinex](images/mucinex-sm-1.jpeg)](images/mucinex-1-jpeg)  | MucinexDM | NA | x1 |
+| ![Mucinex Liquid](images/mucinex-liquid.png) | MucinexDM | N/A | x1 |
+| _coming soon_ | Tesalon Pearls | N/A | x2 |
 
 ## Afternoon Meds
 | Image | Medication | Dose | Number |
 |  ---  |  ---  |  ---  |  ---  |
 | [![gabapentin](images/gaba-sm-1.jpeg)](images/gaba-1.jpeg) | Gabapentin | 300mg | x2 |
 | [![odanestron](images/odan-sm-1.jpeg)](images/odan-1.jpeg) | Ondansetron | 4mg | x2 |
-|       |       |       |       |
+| ![Mucinex Liquid](images/mucinex-liquid.png) | MucinexDM | N/A | x1 |
+| _coming soon_ | Tesalon Pearls | N/A | x2 |
 
 
 
@@ -36,4 +38,5 @@ In addition, he takes a Lovenox (100ml) injection every morning and every evenin
 | [![gabapentin](images/gaba-sm-1.jpeg)](images/gaba-1.jpeg) | Gabapentin | 300mg | x2 |
 | [![odanestron](images/odan-sm-1.jpeg)](images/odan-1.jpeg) | Ondansetron | 4mg | x2 |
 | [![montelukast](images/monte-sm-1.jpeg)](images/monte-1-jpeg) | Montelukast | 10mg | x1 |
-| [![mucinex](images/mucinex-sm-1.jpeg)](images/mucinex-1-jpeg) | MucinexDM | N/A | x1 |
+| ![Mucinex Liquid](images/mucinex-liquid.png) | MucinexDM | N/A | x1 |
+| _coming soon_ | Tesalon Pearls | N/A | x2 |
