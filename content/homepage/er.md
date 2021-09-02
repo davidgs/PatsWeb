@@ -1,7 +1,8 @@
 ---
 title: "Going to the ER"
 weight: 4
-header_menu: true
+header_menu: false
+draft: true
 ---
 
 ---

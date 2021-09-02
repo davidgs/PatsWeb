@@ -89,48 +89,48 @@
     }
     );
     let observed = new Map();
-    observed.set('daily-meds', {
-      "name": "#daily-meds",
-      "form": "#typeform-meds",
-      "show": false,
-      "lastViz": 0.00
-    });
-    observed.set('pain', {
-      "name": "#pain",
-      "form": "#typeform-pain",
-      "show": false,
-      "lastViz": 0.00
-    });
-    observed.set('read-me', {
-      "name": "#read-me",
-      "form": "#typeform-about",
-      "show": false,
-      "lastViz": 0.00
-    });
-    observed.set('going-to-the-er', {
-      "name": "#going-to-the-er",
-      "form": "#typeform-er",
-      "show": false,
-      "lastViz": 0.00
-    });
-    observed.set('locations', {
-      "name": "#locations",
-      "form": "#typeform-doc",
-      "show": false,
-      "lastViz": 0.00
-    });
-    observed.set('calendar', {
-        "name": "#calendar",
-        "form": "#typeform-cal",
-        "show": false,
-        "lastViz": 0.00
-      });
-    observed.set('contact', {
-      "name": "#contact",
-      "form": "#typeform-contact",
-      "show": "false",
-      "lastViz": 0.00
-    });
+    // observed.set('daily-meds', {
+    //   "name": "#daily-meds",
+    //   "form": "#typeform-meds",
+    //   "show": false,
+    //   "lastViz": 0.00
+    // });
+    // observed.set('pain', {
+    //   "name": "#pain",
+    //   "form": "#typeform-pain",
+    //   "show": false,
+    //   "lastViz": 0.00
+    // });
+    // observed.set('read-me', {
+    //   "name": "#read-me",
+    //   "form": "#typeform-about",
+    //   "show": false,
+    //   "lastViz": 0.00
+    // });
+    // observed.set('going-to-the-er', {
+    //   "name": "#going-to-the-er",
+    //   "form": "#typeform-er",
+    //   "show": false,
+    //   "lastViz": 0.00
+    // });
+    // observed.set('locations', {
+    //   "name": "#locations",
+    //   "form": "#typeform-doc",
+    //   "show": false,
+    //   "lastViz": 0.00
+    // });
+    // observed.set('calendar', {
+    //     "name": "#calendar",
+    //     "form": "#typeform-cal",
+    //     "show": false,
+    //     "lastViz": 0.00
+    //   });
+    // observed.set('contact', {
+    //   "name": "#contact",
+    //   "form": "#typeform-contact",
+    //   "show": "false",
+    //   "lastViz": 0.00
+    // });
     for (let [b, a] of observed)
         observer.observe(document.querySelector(a.name)),
           console.log(b + ' = ' + a.name)
