@@ -1,7 +1,8 @@
 ---
 title: "Daily Meds"
 weight: 2
-header_menu: true
+header_menu: false
+draft: true
 ---
 
 Pat takes several medications every day. There are morning meds, 3pm meds, and night-time meds.

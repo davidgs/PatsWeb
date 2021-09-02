@@ -26,23 +26,23 @@
             <article id='{{ anchorize .Title }}' class='post {{ if eq $index_val 0 }}first{{ else }}{{ if eq (add $index_val 1) (len $sections) }}last{{ end }}{{ end }} {{ if eq $postTitle "Calendar" }} cal-post {{ end }}'>
                 <header class="post-header">
 
-                    {{ if eq $postTitle "Calendar" }}
+                    <!-- {{ if eq $postTitle "Calendar" }}
                       <h2 class="post-title">Pat's Calendar</h2>
-                    {{ else }}
+                    {{ else }} -->
                     <h2 class="post-title">{{ .Title }}</h2>
-                    {{ end }}
+                    <!-- {{ end }} -->
                 </header>
                 <section class='post-content {{ if eq $postTitle "Calendar" }} cal-content {{ end }}'>
 
-                {{ if eq $postTitle "Calendar" }}
+                <!-- {{ if eq $postTitle "Calendar" }}
                  {{- partial "cal.html" . -}}
                 {{ else if eq $postTitle "Daily Meds" }}
                  {{- partial "meds.html" . -}}
                 {{ else if eq $postTitle "Pain" }}
                   {{- partial "pain.html" . -}}
-                {{ else }}
+                {{ else }} -->
                   {{ .Content }}
-                {{ end }}
+                <!-- {{ end }} -->
                 </section>
             </article>
             <div class='post-after'></div>

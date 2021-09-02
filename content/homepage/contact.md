@@ -1,7 +1,8 @@
 ---
 title: "Contact"
 weight: 7
-header_menu: true
+header_menu: false
+draft: true
 ---
 **Emergency or medical professionals:**
 - [{{<icon class="fa fa-envelope">}}&nbsp; John Hogan](mailto:hoganjf@hotmail.com)
