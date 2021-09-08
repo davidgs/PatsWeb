@@ -709,6 +709,7 @@ ul li {
   height: 90%;
   word-break: break-word;
   hyphens: auto;
+  font-size: 1.5rem;
 }
 
 .cal-post {

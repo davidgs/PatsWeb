@@ -6,6 +6,7 @@
 <body>
   {{- partial "header.html" . -}}
   {{- block "main" . }}{{- end }}
+  <div id="commento"></div>
   {{- partial "footer.html" . -}}
 
 
@@ -136,7 +137,7 @@
           console.log(b + ' = ' + a.name)
   </script>
   <script defer src="https://commento.davidgs.com:8088/js/commento.js"></script>
-  <div id="commento"></div>
+
 </body>
 {{- partial "statcounter.html" . -}}
 </html>
